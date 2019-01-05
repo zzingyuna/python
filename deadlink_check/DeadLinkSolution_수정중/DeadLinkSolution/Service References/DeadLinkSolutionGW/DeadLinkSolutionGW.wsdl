@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" targetNamespace="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://gw.job.co.kr/DeadLinkSolutionGW.asmx">
+      <s:element name="GetLoadPattern">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="strEncrypt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetLoadPatternResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetLoadPatternResult">
+              <s:complexType>
+                <s:sequence>
+                  <s:element ref="s:schema" />
+                  <s:any />
+                </s:sequence>
+              </s:complexType>
+            </s:element>
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveToLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="sourceSiteNm" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="scan_cnt" type="s:int" />
+            <s:element minOccurs="1" maxOccurs="1" name="deadlink_cnt" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="machineName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEncrypt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveToLogResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="SaveToDeadlinkLog">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="jobPostNo" type="s:int" />
+            <s:element minOccurs="0" maxOccurs="1" name="linkurl" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="type" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="status" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="message" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="strEncrypt" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="SaveToDeadlinkLogResponse">
+        <s:complexType />
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="GetLoadPatternSoapIn">
+    <wsdl:part name="parameters" element="tns:GetLoadPattern" />
+  </wsdl:message>
+  <wsdl:message name="GetLoadPatternSoapOut">
+    <wsdl:part name="parameters" element="tns:GetLoadPatternResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveToLogSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveToLog" />
+  </wsdl:message>
+  <wsdl:message name="SaveToLogSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveToLogResponse" />
+  </wsdl:message>
+  <wsdl:message name="SaveToDeadlinkLogSoapIn">
+    <wsdl:part name="parameters" element="tns:SaveToDeadlinkLog" />
+  </wsdl:message>
+  <wsdl:message name="SaveToDeadlinkLogSoapOut">
+    <wsdl:part name="parameters" element="tns:SaveToDeadlinkLogResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DeadLinkSolutionGWSoap">
+    <wsdl:operation name="GetLoadPattern">
+      <wsdl:input message="tns:GetLoadPatternSoapIn" />
+      <wsdl:output message="tns:GetLoadPatternSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveToLog">
+      <wsdl:input message="tns:SaveToLogSoapIn" />
+      <wsdl:output message="tns:SaveToLogSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="SaveToDeadlinkLog">
+      <wsdl:input message="tns:SaveToDeadlinkLogSoapIn" />
+      <wsdl:output message="tns:SaveToDeadlinkLogSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="DeadLinkSolutionGWSoap" type="tns:DeadLinkSolutionGWSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLoadPattern">
+      <soap:operation soapAction="http://gw.job.co.kr/DeadLinkSolutionGW.asmx/GetLoadPattern" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveToLog">
+      <soap:operation soapAction="http://gw.job.co.kr/DeadLinkSolutionGW.asmx/SaveToLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveToDeadlinkLog">
+      <soap:operation soapAction="http://gw.job.co.kr/DeadLinkSolutionGW.asmx/SaveToDeadlinkLog" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="DeadLinkSolutionGWSoap12" type="tns:DeadLinkSolutionGWSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetLoadPattern">
+      <soap12:operation soapAction="http://gw.job.co.kr/DeadLinkSolutionGW.asmx/GetLoadPattern" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveToLog">
+      <soap12:operation soapAction="http://gw.job.co.kr/DeadLinkSolutionGW.asmx/SaveToLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="SaveToDeadlinkLog">
+      <soap12:operation soapAction="http://gw.job.co.kr/DeadLinkSolutionGW.asmx/SaveToDeadlinkLog" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DeadLinkSolutionGW">
+    <wsdl:port name="DeadLinkSolutionGWSoap" binding="tns:DeadLinkSolutionGWSoap">
+      <soap:address location="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" />
+    </wsdl:port>
+    <wsdl:port name="DeadLinkSolutionGWSoap12" binding="tns:DeadLinkSolutionGWSoap12">
+      <soap12:address location="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

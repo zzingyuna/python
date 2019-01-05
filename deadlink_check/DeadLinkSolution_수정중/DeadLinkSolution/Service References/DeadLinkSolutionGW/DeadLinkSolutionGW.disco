@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://gw.job.co.kr/DeadLinkSolutionGW.asmx?wsdl" docRef="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" xmlns:q1="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" binding="q1:DeadLinkSolutionGWSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" xmlns:q2="http://gw.job.co.kr/DeadLinkSolutionGW.asmx" binding="q2:DeadLinkSolutionGWSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

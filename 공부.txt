@@ -1,0 +1,5 @@
+파이썬 모듈 설치 에러
+python -m pip install --upgrade pip
+
+requests 모듈 설치
+pip install requests

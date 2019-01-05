@@ -1,0 +1,948 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	lang="en">
+
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<title>Job Search</title>
+
+<script type="text/javascript">
+		var CRITERIA_FIELDS_TO_REGISTER = [];
+		
+		var require = {
+			baseUrl : "/careersection/2015PRD.2.4.45.3.0/js/",
+			config: {
+				'fs/FacetedSearchSettings': {
+					waitSeconds: 15,
+					queryString: 'lang=en&amp;portal=640200078&amp;searchtype=3&amp;f=null&amp;LOCATION=200002540&amp;s=4&amp;portal=640200078',
+				    resourcesMapAsJSON: {"headerPanel.signOutTT":"Log out of the system","sessionPanel.okButton":"OK","headerPanel.signIn":"Sign In","helpPanel.searchTips":"Search Tips","resultListPanel.applyButtonTT":"Apply for this job","resultListPanel.viewEditSubmissionButton":"View\/Edit Submission","resultListPanel.mustEnterSearchName":"You must specify a search query name.","seeAllOlf.loading":"Loading","seeAllOlf.showingJobFieldsIn":"Showing all job fields in {0}","infoPanel.of":"of","resultListPanel.multiLineView":"Multi-line","helpPanel.advancedJobSearch":"Advanced Job Search","searchPanel.showLessTT":"Show less values","helpPanel.advancedJobSearchDescription":"To perform a job search using advanced search criteria, click the \"Advanced Search\" link on the search bar and select relevant criteria.","seeAllOlf.showingOrganizations":"Showing all organizations.","sessionPanel.okButtonTT":"Reset the timer","searchPanel.viewAllJobs":"View All Jobs","headerPanel.processes":"Tasks","helpPanel.submitCandidateProfileLinkTT":"Open the form used to refer a candidate","resultListPanel.reApplyButtonTT":"Re-apply for this job","seeAllOlf.showingLocationsIn":"Showing all locations in {0}","resultListPanel.accessSaveSearchesTT":"Access the search queries you have saved","helpPanel.accessMyProfileLink":"Access my profile","resultListPanel.saveSearchTT":"This will save this search with name entered","seeAllOlf.seeJobFields":"See all job fields","resultListPanel.saveSearchTitle":"Search Name","helpPanel.accessMyProfileLinkTT":"Open the form used to manage employment profiles","resultListPanel.saveSearchErrorMessage":"You cannot save this search because you have reached the maximum number of saved searches allowed. Please delete or override an existing search query.","headerPanel.signInTT":"Log in to the system","helpPanel.savingSearches":"Saving searches","resultListPanel.finishDraftSubmissionButton":"Finish Draft Submission","resultListPanel.descending":"Descending","headerPanel.offers":"Offers","resultListPanel.applyButton":"Apply","resultListPanel.previousPage":"Previous","seeAllOlf.filterOlfHint":"The list will update after entering a search criterion.","pagerAccessibilityResources.previousPageLinkTitle":"Go to the previous page","seeAllOlf.showingInfo":"Select up to {0} items to add them to your job search.","seeAllOlf.filterJobFields":"Filter job fields","searchPanel.searchIconTT":"Search for jobs","filterTopPanel.clearCommand":"Clear","icons.draftSubmission":"Draft submission","resultListPanel.referDescription":"Tell us about a friend who might be interested in working for our organization. All privacy rights will be protected.","seeAllOlf.showingOrganizationsIn":"Showing all organizations in {0}","seeAllOlf.showingLocations":"Showing all locations.","headerPanel.messages":"My Messages","headerPanel.welcomeMessageForSignedInUser":"Welcome {0} {1}. You are signed in.","advancedSearchPanel.basicSearch":"Basic Search","resultListPanel.saveSearchAction":"Save this Search","seeAllOlf.emptyFiltering":"No records found","seeAllOlf.seeOrganizations":"See all organizations","helpPanel.referFriend":"Refer a friend","resultListPanel.saveSearchButtonTT":"Expand the 'Save this search' section","helpPanel.closeTT":"Close","resultListPanel.showMoreLocations":"More...","resultListPanel.referACandidateButton":"Refer a candidate","resultListPanel.saveSearchCancel":"Cancel","headerPanel.jobsInJobcartHiddenLabel":"jobs in jobcart","resultListPanel.actions":"Actions","resultListPanel.referAFriendLink":"Refer a friend","infoPanel.jobOpenings":"Job Openings","seeAllOlf.add":"Add","searchPanel.showMoreTT":"Shore more values","accessibility.singleResultAudible":"1 result is available, use up and down arrow keys to navigate.","resultListPanel.singleLineView":"Single-line","resultListPanel.jobsAvailableIn":"Jobs available in:","advancedSearchPanel.addLocation":"Add Location","resultListPanel.sortOrder":"Order","searchPanel.showLess":"Show less...","helpPanel.referCandidateDescription":"Tell us about a person who might be interested in working for our organization. All privacy rights will be protected.","footerPanel.viewStandardCareerSectionTT":"Go to Full Career Section","headerPanel.jobsMatchingMyProfileTT":"Access the list of jobs matching your profile","seeAllOlf.showingJobFields":"Showing all job fields.","resultListPanel.noResults":"No jobs correspond to the specified criteria.","sessionPanel.warningMessage":"This service is set to disconnect automatically after 75 minutes of inactivity. Your session will end in 20 minutes.","seeAllOlf.cancel":"Cancel","resultListPanel.saveSearchErrorOk":"OK","icons.iconLegend":"Icon legend","icons.moreInformation":"More information","icons.completedSubmission":"Completed submission","filterTopPanel.removeCriterion":"Remove criterion {0}","headerPanel.savedSearches":"Saved Searches","seeAllOlf.selectionLimitTitle":"Selection limit reached","resultListPanel.saveSearchConfirmationTitle":"You are about to override a search query and all of its content.","headerPanel.profile":"Profile","seeAllOlf.selectionLimitOK":"OK","searchPanel.showMore":"Show more...","headerPanel.submissionsTT":"Access the My Submissions page containing details related to your submissions","resultListPanel.nextPageTT":"Go to the next page","advancedSearchPanel.addJobField":"Add Job Field","resultListPanel.view":"View","headerPanel.messagesTT":"Access the My Messages page containing your messages","resultListPanel.removeFilters":"To improve your search results, remove one or more filters.","resultListPanel.referLinkTT":"Refer a friend's profile","resultListPanel.icons":"Icons","resultListPanel.share":"Share","resultListPanel.moreActionsButton":"??4344431","resultListPanel.viewAllJobs":"You can also view all available job openings.","headerPanel.jobsMatchingMyProfile":"Jobs Matching My Profile","resultListPanel.reApplyButton":"Re-apply","headerPanel.jobpageTT":"Access the My Jobpage page containing your saved searches, submissions, referrals","helpPanel.helpTT":"Access the online help","resultListPanel.multipleLocations":"Multiple Locations","seeAllOlf.seeOrganizationsIn":"See all organizations in {0}","accessibility.multipleResultAudible":"{0} results are available, use up and down arrow keys to navigate.","pagerAccessibilityResources.pageNumberLinkTitle":"Go to page {0}","seeAllOlf.seeLocationsIn":"See all locations in {0}","seeAllOlf.filterLocations":"Filter locations","resultListPanel.saveSearchLengthError":"The search name exceeds the maximum length allowed ({0}).","searchPanel.viewAllJobsTT":"Access the list of all job openings","helpPanel.referFriendDescription":"Tell us about a friend who might be interested in working for our organization. All privacy rights will be protected.","accessibility.helpAndIconLegend":"Help and Icon Legend","sessionPanel.sessionTerminated":"This service is set to sign out after 75 minutes of inactivity.","icons.urgentNeedJob":"Urgent need job","resultListPanel.saveSearch":"Save this Search","resultListPanel.referLink":"Refer a friend","headerPanel.jobpage":"My Jobpage","headerPanel.advancedSearch":"Advanced Search","resultListPanel.collapseSection":"Collapse this section","infoPanel.rssButtonTT":"Create an RSS feed","seeAllOlf.seeJobFieldsIn":"See all job fields in {0}","resultListPanel.sortBy":"Sort by","resultListPanel.messageLinkJobDescription":"Click the link to view the complete job description.","seeAllOlf.seeLocations":"See all locations","sessionPanel.clickOkResetTimer":"Click OK to reset the timer to 75 minutes.","resultListPanel.pageTitle":"Job Search","helpPanel.savingSearchesDescription":"You can save the current search by clicking \"Save this Search\". Searches are saved in the \"My Saved Searches\" section, under the \"My Jobpage\" tab.","seeAllOlf.filterList":"Filter records:","resultListPanel.multiLineViewLinkAudibleDescription":"Job list in multi line view. Press ENTER to switch to single line view.","sessionPanel.timeoutMessage":"You have been signed out.","searchPanel.noMatchFound":"No match found.","headerPanel.processesTT":"Go to Tasks","headerPanel.jobSearchTT":"Access the job search page","accessibility.noMatchFound":"No match found.","resultListPanel.addToJobCartActionTT":"Save this job","headerPanel.offersTT":"Go to Offers","resultListPanel.referACandidateButtonTT":"Refer a candidate","helpPanel.submitFriendProfileLinkTT":"Open the form used to refer a friend","resultListPanel.ascending":"Ascending","resultListPanel.saveSearchConfirmationText":"Are you sure that you want to override it?","resultListPanel.previousPageTT":"Go to the previous page","resultListPanel.jobListReloaded":"The list of job openings has reloaded","seeAllOlf.filterOrganizations":"Filter organizations","helpPanel.submitFriendProfileLink":"Submit a friend's profile","icons.addedToJobCartResource":"Added to the job cart","resultListPanel.saveSearchDescription":"Save this search so you do not have to select search criteria the next time you are looking for similar jobs.","pagerAccessibilityResources.nextPageLinkTitle":"Go to the next page","infoPanel.rss":"RSS","headerPanel.referrals":"Referrals","headerPanel.signOut":"Sign Out","helpPanel.candidateProfile":"Candidate Profile","headerPanel.account":"Account","resultListPanel.nextPage":"Next","seeAllOlf.selectionLimitMsg":"You can't select more than {0} positions.","helpPanel.referCandidate":"Refer a candidate","helpPanel.candidateProfileDescription":"Take a few minutes to create or modify your employment profile and to specify your preferred working criteria for future openings matching your interests.","resultListPanel.accessSaveSearches":"Access My Saved Searches","resultListPanel.addToJobCartErrorMessage":"You cannot add this item to the job cart, because you have already reached the maximum number of items allowed in the job cart (25). You must first delete an existing item to be able to add a new one.","resultListPanel.finishDraftSubmissionButtonTT":"Finish this draft submission","headerPanel.jobSearch":"Job Search","resultListPanel.saveSearchConfirm":"Confirm","resultListPanel.viewEditSubmissionButtonTT":"View or modify this submission","headerPanel.welcomeMessageForSignedOutUser":"Welcome. You are not signed in.","headerPanel.submissions":"My Submissions","advancedSearchPanel.title":"Advanced Job Search","resultListPanel.singleLineViewLinkAudibleDescription":"Job list in single line view. Press ENTER to switch to multi line view.","footerPanel.viewStandardCareerSection":"View Full Career Section","advancedSearchPanel.clearAll":"Clear All","helpPanel.submitCandidateProfileLink":"Submit a candidate's profile","accessibility.jobListReloaded":"The list of jobs has reloaded. {0} – {1} of {2}. Page {3}","seeAllOlf.emptyTable":"No data available","helpPanel.searchTipsDescription":"You can search jobs by entering relevant data in the above search fields and by filtering the job list with additional criteria.","resultListPanel.addToJobCartAction":"Save Job","advancedSearchPanel.addOrganization":"Add Organization"},
+					versionNumber: '2015PRD.2.4.45.3.0',
+					lang: 'en',
+					portalNo: '640200078',
+					urlOrigin: 'https://pg.taleo.net'	,
+					urlCode: '10000',
+					src: '',
+					urgentJobDisplayed: false,
+					userSignedIn: false,
+					agencyPortal: false,
+					applicationFlowSet: true,
+					addToJobCartLinkDisplayed: true,
+					addThisEnabled: true,
+					multilineLayoutAsJSONArray: [[{type: "field", value: "", index: 0},{type: "staticText", value: " ", index: 0},{type: "staticText", value: "-", index: 0},{type: "staticText", value: " ", index: 0},{type: "field", value: "", index: 1}],[{type: "field", value: "", index: 2}],[{type: "label", value: "Referral Bonus", index: 0},{type: "staticText", value: " ", index: 0},{type: "field", value: "", index: 3}]],
+					defaultOrder: true,
+					defaultSortingField: 'LOCATION',
+					filterPanelOffLayout: false,
+					jobCartItemCount: 0,
+					searchOnMultilingualRequisition: true,
+					saveSearchPanelDisplayed: true,
+					sessionCSRFTokenName: "csrftoken",
+					sessionCSRFToken: "xEBi0YSjiPYbdMmup2EQyTW7RQ7FVNiC92kwLTqxHeU=",
+					timeoutInterval: 4500000,
+					warningInterval: 1200000,
+                    requisitionDescriptionPageDisplayed : true,
+                    logoutServletURL: '/careersection/locallogoutservlet.jss?portal=640200078&portalCode=10000&SPID=http%3A%2F%2Fwww.taleo.com%2Fcareersection',
+					criteriaFieldsToRegister : CRITERIA_FIELDS_TO_REGISTER,
+					multilineViewSetAsDefault : false
+				}
+			}
+		};
+		
+		function setWindowLoaded() {
+			window.loaded = true;
+		}
+
+		if (window.addEventListener) {
+			window.addEventListener("load", setWindowLoaded, false);
+		} else if (window.attachEvent) {
+			window.attachEvent("onload", setWindowLoaded);
+		}
+		
+		if(!window.console) {
+			console = {log: function() {}};
+		};
+</script>
+<script
+	data-main="/careersection/2015PRD.2.4.45.3.0/js/facetedsearch/FacetedSearchPage.js"
+	src="/careersection/2015PRD.2.4.45.3.0/js/common/require.js"></script>
+<script
+	src="/careersection/2015PRD.2.4.45.3.0/js/integration/iframes_communication.js"></script>
+<script src="/careersection/2015PRD.2.4.45.3.0/js/common/json2.js"></script>
+
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/css/jquery-ui.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/css/faceted_search.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/css/quick_filter_panel.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/css/result_list_panel.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/css/header_panel.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/css/advanced-search-panel.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/css/see_all_olf_popup.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/css/footer_panel.css"
+	type="text/css" />
+<link rel="stylesheet"
+	href="/careersection/2015PRD.2.4.45.3.0/UIStyleSheet.dcss?styleSheet=FSPG_CAREERS_BLUE_GRAY_2014&timestamp=1515588025184"
+	type="text/css" />
+<script type='text/javascript' src='https://s7.addthis.com/js/250/addthis_widget.js?username=xa-4d3ecd770e885ac3'></script>
+<title>PG.com | Careers</title><meta http-equiv="Content-Type" content="text/html; charset=utf-8"></meta><meta name="description" content="PG.com | Careers"></meta><meta name="viewport" content="width=device-width, initial-scale=1"></meta><meta name="robots" content="noindex"></meta><link type="text/css" rel="stylesheet" href="/careersection/theme/581/1472235576000/en/theme/css/main.css"></link>
+
+
+</head>
+<body>
+	<div class="siteWrap">
+	  <div class="siteHeader">
+		<div class="wrap">
+		   <span class="logo image-text">Procter & Gamble</span>
+		   <img class="siteHeader-brands cf" src="/careersection/theme/581/1472235576000/en/theme/images/global_header_brands.png" alt="Brand: Pampers, Tide, Gillette, Olds Spice, Oral-B, Pantene"></img>
+ 	  </div>
+ 
+	</div>
+			  
+	  <div id="content" class="siteContent wrap">
+
+		  <div class="article-header">
+				<div class="linkleft"><h1>Our Career Areas</h1>
+				<p>
+				Explore all areas of opportunity or have fun with our short, interactive quiz - the possibilities may surprise you.	
+				</p>
+				<a href="http://pg-fit-tool.com/" class="storyModule-link btn btn-go1" shape="rect">Let's Go</a>
+				</div>
+				
+				<div class="linkright"><h1>Our Hiring Process</h1>
+					<p>
+					From your inital application to final offer, and everything in between, see what you can expect when applying to P&G.
+					</p>
+					<a href="http://pgcareers.com/apply/our-hiring-process/" class="storyModule-link btn btn-go2" shape="rect">Learn More</a>
+				</div>
+			  <div class="article-header-mobile">
+				  <div class="careerAreas">
+					  <a title="Our Career Areas" href="http://pg-fit-tool.com/" shape="rect">Our Career Areas</a>
+				  </div>
+				  <div class="hiringProcess">
+					  <a title="Our Hiring Process" href="http://pgcareers.com/apply/our-hiring-process/" shape="rect">Our Hiring Process</a>
+				  </div>
+
+			  </div>
+	   
+	   
+		  </div>
+		  
+		  <div class="article-content">
+				<div id="head-wrapper">
+				    <p id="russia-apply">To view and apply for jobs in Russia  <a href="https://career18.sapsf.com/career?company=pngP2" title="Apply" shape="rect">click here</a></p>
+					<a href="http://pg.sitebase.net/global/apphelp_english/display.cgi?Apphelp_email=careers.im%40pg.com&Apphelp_id=Global" class="application-help" title="Application Help" shape="rect">Application Help</a>
+				</div>
+			<div class="article-section col-grp">
+
+
+			
+			  
+				
+				  
+				<div>
+					
+
+	<div class="masterbody" id="facetedSearchBody">
+		<div class="header"></div>
+
+		<div class="menu"></div>
+		<div class="mainsection">
+			<div class="headersection">
+				
+
+<div id="headerPanelContainer" class="headerpanel">
+	<div class="userpanel">
+		<h2 class="username">Welcome. You are not signed in.</h2>
+	</div>
+	
+	<div class="right-header-info">
+		
+		
+			<span id="header-actions-signed-out" class="header-actions metalink">
+				<a id="signin-link" class="signed-in">Sign In</a>
+			</span>
+		
+	</div>
+	<div style="clear:both;"></div>
+	
+	<ul id="tabs" class="linkpanel">
+		<li>
+	  		<a id="jobsearch-link" class="selectedlink">Job Search</a>
+	  	</li>
+	  
+	  	
+	  		<li>
+	  			<a id="jobpage-link" class="link">My Jobpage</a>
+	  		</li>	
+	  	
+	  	
+	  	
+	  	
+	  	
+
+        
+	</ul>
+</div>
+			</div>
+			
+
+<div id="sessionWarning" class="session-popup-window messagewarningpanel" role="alertdialog" aria-hidden="true" aria-labelledby="warningID" aria-describedby="okResetID">
+	<div class="messagetitle" id="warningID">This service is set to disconnect automatically after 75 minutes of inactivity. Your session will end in 20 minutes.</div>
+	<br />
+	<div class="messagetext" id="okResetID">Click OK to reset the timer to 75 minutes.</div>
+	<div class="popup-actions">
+		<a href="#" role="button" class="result-list-button" id="sessionWarningOK" title="Reset the timer">OK</a>
+	</div>
+</div>
+
+<div id="sessionTimeout" class="session-popup-window messagewarningpanel" role="alertdialog" aria-hidden="true" aria-labelledby="timeoutID" aria-describedby="sessionTerminatedId">
+	<div class="messagetitle" id="timeoutID">You have been signed out.</div>
+	<br />
+	<div class="messagetext" id="sessionTerminatedId" >This service is set to sign out after 75 minutes of inactivity.</div>
+	<div class="popup-actions">
+		<a href="#" role="button" class="result-list-button" id="sessionTimeoutOK">OK</a>
+	</div>
+</div>
+			
+
+
+
+<div class="column165">
+	<div id="helpPanel" class="helppanel" role="dialog" aria-describedby="helpContentId" aria-label="Help and Icon Legend">
+		<div class="helpTitle">
+			<span class="helpDecorator" id="helpDecorator"></span>
+            <button type="button" class="closeHelp" id="closeHelp">
+                <img src="/careersection/2015PRD.2.4.45.3.0/images/icon_help_close.png" title="Close" alt="Close">
+            </button>
+		</div>
+		
+		<div class="helpContent" id="helpContentId">
+			<div class="helpsubtitle">Search Tips</div>
+			<div class="helplabel">You can search jobs by entering relevant data in the above search fields and by filtering the job list with additional criteria.</div>
+			
+			
+				<div class="helpsubtitle">Saving searches</div>
+				<div class="helplabel">You can save the current search by clicking "Save this Search". Searches are saved in the "My Saved Searches" section, under the "My Jobpage" tab.</div>
+			
+
+			
+
+			
+	
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+				<div class="legendpanel">
+					<div class="legendtitle">Icon legend</div>
+					
+					
+						<div class="legendlabel icon-added-to-job-cart">Added to the job cart</div>
+					
+					
+						<div class="legendlabel icon-draft">Draft submission</div>
+						<div class="legendlabel icon-already-applied-on">Completed submission</div>
+					
+				</div>
+				
+		</div>
+	</div>
+</div>
+
+
+<div class="jobsearch">		
+	<div id="criteria-container">
+		<div class="topSearchPanel" id="searchPanel" valign="center">
+			<!-- search -->
+			<div class="topSearchContainer">
+				
+
+
+
+<div class='criteria-fields' id="criteriaFields">
+	
+		<div class="criteria-field">
+            <label for="KEYWORD">
+			Keyword
+            </label>
+			<input type="text" class="criteriaFieldInput" id="KEYWORD" isautosuggest="true"
+				suggestid="1" isolf="false" isphrase="false" 
+				value="" />
+			<input type="hidden" id="KEYWORD-olfid" value="" />
+		</div>
+	
+		<div class="criteria-field">
+            <label for="LOCATION">
+			Location
+            </label>
+			<input type="text" class="criteriaFieldInput" id="LOCATION" isautosuggest="true"
+				suggestid="2" isolf="true" isphrase="false" 
+				value="Korea, Republic of" />
+			<input type="hidden" id="LOCATION-olfid" value="200002540" />
+		</div>
+	
+		<div class="criteria-field">
+            <label for="JOB_NUMBER">
+			Job Number
+            </label>
+			<input type="text" class="criteriaFieldInput" id="JOB_NUMBER" isautosuggest="false"
+				suggestid="" isolf="false" isphrase="false" 
+				value="" />
+			<input type="hidden" id="JOB_NUMBER-olfid" value="" />
+		</div>
+	
+	
+		
+		<div class="criteria-field search-button-container">
+			<input id="search" type="button" class="search-button hidden-text-button" aria-label="Search for jobs"/>
+		</div>
+	
+	<div class='search-panel-links-container'>
+		<ul>
+			<li>
+				<a id="clearButton" href="#">View All Jobs</a>
+			</li>
+			
+			
+		</ul>
+	</div>
+</div>
+
+			</div>
+		</div>
+
+		
+
+
+
+<div id="advanced-search-panel-container"
+	class="advanced-search-panel-container">
+	<div id="advanced-search-padding-panel">
+		<div class="advanced-search-top-panel">
+			<span class="advanced-search-title">
+				Advanced Job Search
+			</span>
+			<button id="close-window-button" class="close-window-button" tabindex="0" style="background: none; border: none;font-size:100%" title="close" alt="close">&times;</button>
+		</div>
+		<br class="clear" />
+		<div class="advanced-search-criteria">
+			
+				<div class="advanced-search-row">
+					
+						<div class="criteria-widget" style="width: 33%">
+							
+								
+								
+								
+								
+									
+
+
+
+<div class="olf-widget">
+	<div class="widget-title">
+		Organization
+	</div>
+
+	<div id="ORGANIZATION-olf-criteria-field"></div>
+
+	<div id="ORGANIZATION-olf-add-button-div" class="add-olf-link">
+		<a id="ORGANIZATION-olf-add-button" class="olf-add-link"> 
+				
+				
+					Add Organization
+				
+				
+			
+		</a>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	CRITERIA_FIELDS_TO_REGISTER.push({
+		type : 'OLFCriteriaField',
+		id : 'ORGANIZATION',
+		fieldId : '6',
+		values : '{}',
+		suggestId : '4'
+	});
+</script>
+
+
+								
+							
+						</div>
+						
+					
+						<div class="criteria-widget" style="width: 33%">
+							
+								
+								
+								
+								
+									
+
+
+
+<div class="olf-widget">
+	<div class="widget-title">
+		Location
+	</div>
+
+	<div id="LOCATION-olf-criteria-field"></div>
+
+	<div id="LOCATION-olf-add-button-div" class="add-olf-link">
+		<a id="LOCATION-olf-add-button" class="olf-add-link"> 
+				
+					Add Location
+				
+				
+				
+			
+		</a>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	CRITERIA_FIELDS_TO_REGISTER.push({
+		type : 'OLFCriteriaField',
+		id : 'LOCATION',
+		fieldId : '5',
+		values : '{}',
+		suggestId : '2'
+	});
+</script>
+
+
+								
+							
+						</div>
+						
+					
+						<div class="criteria-widget" style="width: 33%">
+							
+								
+								
+								
+								
+									
+
+
+
+<div class="olf-widget">
+	<div class="widget-title">
+		Job Field
+	</div>
+
+	<div id="JOB_FIELD-olf-criteria-field"></div>
+
+	<div id="JOB_FIELD-olf-add-button-div" class="add-olf-link">
+		<a id="JOB_FIELD-olf-add-button" class="olf-add-link"> 
+				
+				
+				
+					Add Job Field
+				
+			
+		</a>
+	</div>
+
+</div>
+
+<script type="text/javascript">
+	CRITERIA_FIELDS_TO_REGISTER.push({
+		type : 'OLFCriteriaField',
+		id : 'JOB_FIELD',
+		fieldId : '1',
+		values : '{}',
+		suggestId : '3'
+	});
+</script>
+
+
+								
+							
+						</div>
+						
+							<br />
+						
+					
+						<div class="criteria-widget" style="width: 33%">
+							
+								
+								
+								
+									
+
+
+
+
+
+
+
+
+
+
+<div id="URGENT_JOB-checkbox-criteria" class="checkbox-widget">
+	<div class="widget-title">
+		Urgent Jobs
+	</div>
+	<table class="criteria-options">
+		
+				
+					
+					
+						
+					
+				
+				
+				<tr>
+					<td>
+						<input id="URGENT_JOB-1-option" type="checkbox" name="URGENT_JOB" value="1"  />
+					</td>
+					<td>
+						<span id="URGENT_JOB-1-option-desc" class="criteria-label-wrapper">
+							Urgent Jobs Only
+						</span>
+					</td>
+				</tr>
+		
+	</table>
+</div>
+
+<script type="text/javascript">
+	CRITERIA_FIELDS_TO_REGISTER.push({
+		type : 'CheckboxCriteriaField',
+		id : 'URGENT_JOB',
+		fieldId : '24'
+	});
+</script>
+
+								
+								
+							
+						</div>
+						
+					
+				</div>
+			
+		</div>
+		<div id="advanced-search-buttons-container"
+			class="advanced-search-buttons-container">
+			<input id="clear-advanced-search-criteria" type="button"
+				class="clear-advanced-search-criteria" value="Clear All" /> 
+			<input id="advanced-search-button" type="button" class="search-button" />
+		</div>
+
+		<br class="clear" />
+	</div>
+</div>
+
+	</div>
+
+	<div class="info-panel" id="infoPanel">
+		<div id="infoPanelContainer" class="subtitle">
+
+    <div class="page-info-panel subtitle">
+        <h1 class="info-panel-title">
+            Job Openings
+        </h1>
+		<span class="paging-info paging-info-data" id="currentPageInfo">
+			
+		</span>
+    </div>
+
+    
+        <div class="rss-feed-panel subtitle" id="rssFeedPanel">
+                RSS:
+            <a role="button" class="rss-feed-link" id="rssFeedLink">
+                <img role="button"  src="/careersection/2015PRD.2.4.45.3.0/images/ico-rss.png" alt="Create an RSS feed">
+            </a>
+        </div>
+    
+
+</div>
+	</div>
+	
+	
+	
+	
+
+	
+	<div class="leftLayout">
+		<!-- quick filter -->
+		<div id="filter-panel" class="filter-panel">
+		
+			<div id="filter-LOCATION" class="filter-group">
+				<object class="filter-group-config">
+					<param name="name" value="Location" />
+					<param name="asSelect" value="false" />
+					<param name="expanded" value="true" />
+					<param name="isOlf" value="true"/>
+					<param name="code" value="LOCATION"/>
+					<param name="fieldId" value="5" />
+				</object>
+			</div>
+			<div class="filterSeparator"></div>
+		
+			<div id="filter-JOB_FIELD" class="filter-group">
+				<object class="filter-group-config">
+					<param name="name" value="Job Field" />
+					<param name="asSelect" value="false" />
+					<param name="expanded" value="true" />
+					<param name="isOlf" value="true"/>
+					<param name="code" value="JOB_FIELD"/>
+					<param name="fieldId" value="1" />
+				</object>
+			</div>
+			<div class="filterSeparator"></div>
+		
+			<div id="filter-JOB_TYPE" class="filter-group">
+				<object class="filter-group-config">
+					<param name="name" value="Job Type" />
+					<param name="asSelect" value="false" />
+					<param name="expanded" value="true" />
+					<param name="isOlf" value="false"/>
+					<param name="code" value="JOB_TYPE"/>
+					<param name="fieldId" value="4" />
+				</object>
+			</div>
+			<div class="filterSeparator"></div>
+		
+</div>
+<!-- It's content of popup window managed by SeeAllOflPopup.js -->
+
+<div id="seeAllOlfPanel" class="see-all-olf-panel masterbody">
+	<div class="mainsection">
+		<div id="title" class="see-all-olf-title headerpanel">
+			<span id="showingWhat"></span>
+			<span id="showingInfo"></span>
+		</div>		
+		<div id="popupProgressIndicator" class="popup-progress-indicator"></div>
+		<div id="table" class="see-all-olf-table"></div>
+		<div id="filtersSelection" class="filter-top-panel-container">
+			<div id="filtersSelectionPanel"></div>
+		</div>
+		<div id="actions" class="see-all-olf-actions">
+			<span id="cancelAction" class="see-all-olf-cancel metalink2"><a href="#">Cancel</a></span>
+			<a href="#" id="addAction" class="see-all-olf-add result-list-button">Add</a>
+		</div>
+	</div>
+	
+	<div class="popup-window messagewarningpanel" id="selectionLimitDialog">
+		<p id="selectionLimitTitle" class="messagetitle">Selection limit reached</p>
+		<p id="selectionLimitMessage" class="messagetext"></p>
+		<div class="popup-actions">
+			<a href="#" class="result-list-button" id="selectionLimitOK">OK</a>
+		</div>
+	</div>
+	<div class="popup-overlay" id="dialogOverlay"></div>	
+</div>
+		
+		
+		<div class="jobListPanel" id="resultListPanel">
+			<!-- job list -->
+			
+<div class="filter-top-panel-container" id="filterTopPanel">
+	<div class="filter-top-panel">
+		<ul class="filter-list" id="filterList"></ul>
+	</div>
+
+	<div class="clear-top-filter metalink2">
+		<a href="#" class="clear-button" id="clearButton">Clear</a>
+	</div>
+</div>
+			<div id="listTopPanel" class="list-top-panel savecontentpanel">
+    
+        <span class="metalink2">
+            <a role="button" aria-expanded="false" id="showSaveSearch" class="save-search" href="#" title="Expand the 'Save this search' section">
+                    Save this Search
+            </a>
+        </span>
+    
+        
+            <span style="float: right;">
+        
+       
+		<span class="metalink2">
+            <label id="switchViewLinkAudibleDescription" class="hidden-audible">Job list in multi line view. Press ENTER to switch to single line view.</label>
+			<a id="listFormatSwitch" href="#" class="list-format-switch" aria-labelledby="switchViewLinkAudibleDescription">Multi-line</a>
+		</span>
+       
+    
+		<span id="help" class="help">
+            <button type="button" style="background: none; border: none;">
+                <img src="/careersection/2015PRD.2.4.45.3.0/images/ico-help.png" title="Access the online help" alt="Access the online help">
+            </button>
+		</span>
+    
+     
+		</span>
+    
+    <div style="clear:both;"></div>
+    <div id="box2" class = "list-top-panel-box">
+        <div id="sortPanel" class="sort-panel">
+            <label for="sortBySelect">
+                Sort by
+            </label>
+            <div style="display: block;">
+                <select id="sortBySelect" class="sort-dropdown">
+                    
+                        <option id="JOB_TITLE-sortfield" value="JOB_TITLE" sortid="5" ascending="true" descending="true">
+                                Job Title
+                        </option>
+                    
+                        <option id="LOCATION-sortfield" value="LOCATION" sortid="4" ascending="true" descending="true">
+                                Location
+                        </option>
+                    
+                        <option id="RELEVANCY-sortfield" value="RELEVANCY" sortid="3" ascending="false" descending="true">
+                                Relevancy
+                        </option>
+                    
+                </select>
+                <label for="sortingOrder" class="hidden-audible">Order</label>
+                <select id="sortingOrder" class="sort-dropdown">
+                    <option value="ascendingOrder" ascendingorder="true">Ascending</option>
+                    <option value="descendingOrder" ascendingorder="false">Descending</option>
+                </select>
+            </div>
+        </div>
+
+        
+            <div id="languagesPanel" class="language-panel" >
+                <label for="JOB_LOCALE-select">
+                    Jobs available in:
+                </label>
+                <div id="filter-JOB_LOCALE" class="filter-language-panel">
+                    <object class="filter-groups" style="display: none;">
+                        <param name="name" value="Language"/>
+                        <param name="fieldId" value="0"/>
+                        <param name="code" value="JOB_LOCALE"/>
+                    </object>
+                </div>
+            </div>
+        
+            </div>
+
+    <div style="clear:both;"></div>
+    
+        <div class="save-search-panel" id="saveSearchPanel">
+    <p id="saveSearchDescription" class="text">Save this search so you do not have to select search criteria the next time you are looking for similar jobs.</p>
+    <div class="input-panel">
+		<span class="text">
+            <label for="saveSearchTitle">
+                Search Name
+            </label>
+		</span>
+        <input type="text" id="saveSearchTitle" class="save-search-title" aria-describedby="saveSearchDescription" maxlength="200"/>
+        <a href="#" role="button" id="saveSearchSave" class="result-list-button" title="This will save this search with name entered">Save this Search</a>
+		 <span class="metalink2">
+		 	<a href="#" role="button" id="saveSearchCancel" class="save-search-cancel">Cancel</a>
+		 </span>
+    </div>
+    <div class="list-link-panel metalink2">
+        <a id="accesSaveSearchesLink" href="/careersection/10000/mysearches.ftl" class="acccess-save-searches" role="button">
+            Access My Saved Searches
+        </a>
+    </div>
+
+    <div class="popup-window messagewarningpanel" id="overwriteSearchConfirmation"  role="alertdialog" aria-hidden="true" aria-labelledby="overwriteId" aria-describedby="messageTextId" >
+        <p class="messagetitle" id="overwriteId" >You are about to override a search query and all of its content.</p>
+        <p class="messagetext" id ="messageTextId">Are you sure that you want to override it?</p>
+        <div class="popup-actions">
+            <a href="#" class="result-list-button" id="confirmSaveSearch" role="button">Confirm</a>
+            <a href="#" class="result-list-button" id="cancelSaveSearch" role="button">Cancel</a>
+        </div>
+    </div>
+    <div class="popup-window messageerrorpanel" id="saveSearchError"
+         role="alertdialog" aria-hidden="true"
+         aria-labelledby="saveSearchErrorMessageId">
+        <h class="messagetext" id="saveSearchErrorMessageId">You cannot save this search because you have reached the maximum number of saved searches allowed. Please delete or override an existing search query.</h>
+        <div class="popup-actions">
+            <a href="#" class="result-list-button" id="saveSearchErrorOk" role="button" >OK</a>
+        </div>
+    </div>
+
+    <div class="popup-window messageerrorpanel" id="saveSearchNoNameError"
+         role="alertdialog" aria-hidden="true"
+         aria-labelledby="saveSearchNoNameErrorMessageId">
+
+        <p class="messagetext" id="saveSearchNoNameErrorMessageId">You must specify a search query name.</p>
+        <div class="popup-actions">
+            <a href="#"  class="result-list-button" id="saveSearchNoNameErrorOk" role="button">OK</a>
+        </div>
+
+    </div>
+
+    <div class="popup-window messageerrorpanel" id="saveSearchLengthError" role="alertdialog" aria-hidden="true" aria-labelledby="saveSearchLengthErrorMessageId">
+        <p id="saveSearchLengthErrorMessageId" class="messagetext"></p>
+        <div class="popup-actions">
+            <a href="#" class="result-list-button" id="saveSearchLengthErrorOk" role="button">OK</a>
+        </div>
+    </div>
+    <div class="close-button-container">
+        <a href="#" id="closeButton" class="close-button" role="button">
+            <img src="/careersection/2015PRD.2.4.45.3.0/images/sort-arrow-ascending.png" alt="Collapse this section">
+        </a>
+    </div>
+</div>
+
+
+    
+</div>
+			<div id="searchresults">
+    <span id="reloadMessage" role="alert" class="hidden-audible" aria-hidden="true"></span>
+	<div style="clear:both;"></div>
+	<div id="jobsTableContainer">
+		<table id="jobs" class="table" summary="Job Openings">
+			<thead>
+		    	<tr class="headers subtitle">
+                    <th scope="col"><span class="hidden-audible">Icons</span></th>
+					
+						<th width="50%" scope="col">Job Title</th>
+					
+						<th width="30%" scope="col">Location</th>
+					
+						<th width="20%" scope="col">Job Segmentation</th>
+					
+		            <th scope="col"> Actions </th>
+		        </tr>
+		    </thead>
+		    <tbody>
+		    </tbody>
+		</table>
+	</div>
+	<div id="multilineListContainer">
+		<ul id="jobList" class="multiline-list"></ul>
+	</div>
+	
+	<div id="noResults">
+		<p class="no-results-info text">No jobs correspond to the specified criteria.</p>
+		<ul class="no-result-option-list">
+			<li class="text">To improve your search results, remove one or more filters.</li>
+			<li class="metalink2"><a id="viewAllJobsLink" href="#">You can also view all available job openings.</a></li>
+		</ul>
+	</div>
+	
+	
+	
+	<div style="clear: both;"></div>
+	
+	<div id="jobPager" class="pagerpanel">
+		<span class="pagersectionpanel">
+			<span class="pagerlinkoff">
+				<a href="#" id="previous" title="Go to the previous page">Previous</a>
+			</span>
+		</span>
+		<span class="pagersectionpanel">
+			<ul class="pager">
+			</ul>
+		</span>
+		<span class="pagersectionpanel">
+			<span class="pagerlink">
+				<a href="#" id="next" title="Go to the next page">Next</a>
+			</span>
+		</span>
+	</div>
+	<div id="progressIndicator" class="progress-indicator mastercontentpanel"></div>
+
+	<div class="popup-window messageerrorpanel" id="addToJobCartError" role="alertdialog" aria-hidden="true" aria-labelledby="jobCartErrorID" >
+		<p class="messagetext" id="jobCartErrorID" >You cannot add this item to the job cart, because you have already reached the maximum number of items allowed in the job cart (25). You must first delete an existing item to be able to add a new one.</p>
+		<div class="popup-actions">
+			<a href="#" class="result-list-button" id="addToJobCartErrorOk" role="button" >OK</a>
+		</div>
+	</div>
+</div>
+
+		</div>
+	</div>
+</div>
+
+<br class="clear" />
+
+		</div>
+		<div class="popup-overlay" id="popupOverlay">
+</div>
+
+
+		<div class="footer">
+			
+
+
+
+
+		</div>
+	</div>
+	
+				</div>
+			 
+			 
+
+		  
+
+	   
+		  </div>
+	   
+
+		<div class="siteFooter content-wrap">
+		  <ul class="footerLinks"><li><a href="http://www.pg.com/en_US/terms_conditions/index.shtml" shape="rect">Terms & Conditions</a></li><li><a href="http://www.pg.com/privacy/employee/employeeprivacypolicy.shtml" shape="rect">Privacy Policy</a></li><li>© 2015 Procter & Gamble. All rights reserved. An equal opportunity employer.</li></ul>
+		</div>
+	  </div>
+	</div>
+  </div>
+
+</body>
+
+</html>
+
