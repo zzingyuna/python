@@ -1,5 +1,29 @@
-���̽� ��� ��ġ ����
+﻿파이썬 모듈 설치 에러
 python -m pip install --upgrade pip
 
-requests ��� ��ġ
+requests 모듈 설치
 pip install requests
+
+점프 투 파이썬
+https://wikidocs.net/book/1
+
+
+https://www.codecademy.com/learn/learn-python  
+https://doc.scrapy.org/en/latest/intro/install.html#installing-scrapy  
+
+
+https://code.tutsplus.com/ko/tutorials/how-to-write-your-own-python-packages--cms-26076  
+https://doc.scrapy.org/en/latest/intro/overview.html  
+https://tonyne.jeju.onl/2015/02/04/%EC%98%A4%ED%94%88%EC%86%8C%EC%8A%A4-scrapy-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%9B%B9%ED%81%AC%EB%A1%A4%EB%9F%AC/  
+
+
+-- 샘플 페이지 (3초뒤 내용 변경되는..)  
+http://pythonscraping.com/pages/javascript/ajaxDemo.html  
+
+
+scrapy shell   #scrapy xpath,css 찾을때 사용  
+fetch ('url....')  
+view(response)   #html 웹페이지로 띄워 줌  
+print response.text  
+response.css('hr').extract_first()  
+
